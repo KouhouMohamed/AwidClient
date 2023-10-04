@@ -1,0 +1,76 @@
+.home{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 2rem;
+}
+.home--title{
+    font-size: 4rem;
+}
+.home--title .span--q{
+    color: rgb(145, 94, 192);
+}
+.home--title .span--p{
+    color: rgb(145, 100, 100);
+}
+.home--description{
+    color: #4a4a4a;
+    margin: 1rem 0;
+}
+.home--buttons{
+    display:flex ;
+    align-items: center;
+    gap: 1rem;
+}
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn--1{
+    border-radius: 10px;
+    gap: 10px;
+    background: #ada7ad;
+    color: #fff;
+}
+.btn--2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: #ada7ff;
+}
+.home--buttons .btn--2 .btn--icon{
+    font-size: 2.2rem;
+}
+.home--image img{
+    width: 100%;
+}
+@media screen and (max-width: 2000px) {
+    .home{
+        padding: 15px 5%;
+        transition: 0.3s ease-in;
+    }
+    .home--title{
+        font-size: 3rem;
+        transition: 0.3s ease-out;
+    }
+    .home--description{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .home{
+        padding: 15px 3%;
+        transition: 0.3s ease-in;
+        flex-direction: column;
+    }
+    .home--content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
