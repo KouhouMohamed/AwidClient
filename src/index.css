@@ -31,3 +31,15 @@ body{
 section{
   padding: 0 10%;
 }
+.section--slogan{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bolder;
+  color: green;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+.section--heading{
+  font-size: 2rem;
+  margin: 1rem 0 2.3rem 0;
+}

@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
                 <div className="nav--divider"></div>
                 <ul className="nav--list">
-                    <li><a href='#home'>Acceil</a></li>
+                    <li><a href='#home'>Acceill</a></li>
                     <li><a href='#services'>Services</a></li>
                     <li><a href='#category'>Categories</a></li>
                     <li><a href='#about'>About Us</a></li>
