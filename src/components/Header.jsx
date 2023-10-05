@@ -1,5 +1,5 @@
 import React from 'react'
-import { HiShoppingCart, HiSearch, HiMenu, HiX } from 'react-icons/hi';
+import { HiShoppingCart, HiSearch, HiMenu, HiX, HiUserCircle } from 'react-icons/hi';
 import "../styles/header.css"
 const Header = ({ menuOpen, setMenuOpen }) => {
     const menuIcon = menuOpen ? <HiX /> : <HiMenu />;
@@ -9,7 +9,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
     return (
         <>
             <header className='header'>
-                <Navbar />
+                <Navbar setMenuOpen={setMenuOpen} />
             </header>
             <button className="burger--menu" onClick={handleToggle}>
                 {menuIcon}
@@ -21,32 +21,32 @@ const Header = ({ menuOpen, setMenuOpen }) => {
 export const ResponsiveMenu = ({ menuOpen, setMenuOpen }) => {
     return (
         <div className={`res--menu ${menuOpen ? 'res--menu-open' : ''}`}>
-            <Navbar />
+            <Navbar setMenuOpen={setMenuOpen} />
         </div>
     )
 }
 
-const Navbar = () => {
+const Navbar = ({ setMenuOpen }) => {
     return (
         <>
             <nav className="header--nav">
                 <div className="nav--logo">
-                    <a href="#">
+                    <a href="#home" onClick={() => setMenuOpen(false)}>
                         <h2>Info Boussairi</h2>
                     </a>
                 </div>
                 <div className="nav--divider"></div>
                 <ul className="nav--list">
-                    <li><a href='#home'>Acceill</a></li>
-                    <li><a href='#services'>Services</a></li>
-                    <li><a href='#category'>Categories</a></li>
-                    <li><a href='#about'>About Us</a></li>
-                    <li><a href='#footer'>Contact</a></li>
+                    <li><a href='#home' onClick={() => setMenuOpen(false)}>Acceill</a></li>
+                    <li><a href='#products' onClick={() => setMenuOpen(false)}>Products</a></li>
+                    <li><a href='#category' onClick={() => setMenuOpen(false)}>Categories</a></li>
+                    <li><a href='#footer' onClick={() => setMenuOpen(false)}>About Us</a></li>
+                    <li><a href='#footer' onClick={() => setMenuOpen(false)}>Contact</a></li>
                 </ul>
             </nav>
             <div className="nav--icons">
                 <HiShoppingCart className='nav--icon' />
-                <HiSearch className='nav--icon' />
+                <HiUserCircle className='nav--icon' />
             </div>
         </>
     )

@@ -18,7 +18,7 @@ body{
   width: 10px;
 }
 
-::-webkit-slider-thumb{
+::-webkit-scrollbar-thumb{
   background: linear-gradient(135deg, #1cb5e0, #000851);
   border-radius: 10px;
 }

@@ -3,6 +3,8 @@ import { useState } from "react"
 import Home from "./components/Home";
 import Category from "./components/Category";
 import Banner from "./components/Banner";
+import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +18,8 @@ function App() {
       <Home />
       <Category />
       <Banner />
+      <Products />
+      <Footer />
     </>
   )
 }
