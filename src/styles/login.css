@@ -1,0 +1,107 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  flex-direction: column;
+  
+}
+
+.modalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: red;
+  font-size: 2.2rem;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  margin: 10px;
+  padding: 5px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+  flex-direction: column;
+}
+.modalContainer .body input{
+    border: 2px solid #99a2a5;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.modalContainer .login--footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modalContainer .login--footer button {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  background-color: cornflowerblue;
+  color: rgb(60, 49, 49);
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+.modalContainer .login--footer a{
+    font-weight: bold;
+    position: relative;
+}
+.modalContainer .login--footer a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: #129b12;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    transition: width 0.3s  ease;
+}
+.modalContainer .login--footer a:hover::after{
+    width: 90%;
+}

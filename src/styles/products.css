@@ -30,17 +30,52 @@
 }
 .product--image{
     width: 200px;
+    height: 130px;
     border-radius: 10%;
 }
 .product--title{
     text-transform: uppercase;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
     color: rgb(68, 66, 66);
 }
 .product--price{
     letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
     color: rgb(68, 66, 66);
+    margin: 0px 100px;
+}
+.product--row{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: flex-end;
+}
+.product--icon{
+    font-size: 2.2rem;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid #1c8976;
+    color: #1c8976;
+    cursor: pointer; 
+    margin-bottom: 5px;
+}
+.product--icon:hover{
+    color: #fff;
+    background: #1c8976;
+    transition: 0.3s ease-in;
+}
+.product--btn{
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-style: oblique;
 }
 @media screen and (max-width: 2000px) {
     .products{
@@ -52,5 +87,8 @@
     .products{
         padding: 3rem 3%;
         transition: 0.3s ease-in;
-    } 
+    }
+    .product--price{
+        margin: 0px 50px;
+    }
 }

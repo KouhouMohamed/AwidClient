@@ -18,6 +18,9 @@
 .nav--logo h2{
     color: #585858;
 }
+.nav--logo a{
+    text-decoration: none;
+}
 .nav--divider{
     border-left: 1px dotted #777e90;
     padding: 10px;
@@ -35,6 +38,7 @@
     color: #777e90;
     font-weight: bold;
     position: relative;
+    text-decoration: none;
 }
 .nav--list a::after{
     content: '';
@@ -52,7 +56,6 @@
 .nav--list a:hover::after{
     width: 90%;
 }
-
 .nav--icons{
     color: #777e90;
     display: flex;
@@ -73,6 +76,59 @@
     background: #484cb6;
     transition: 0.3s ease-in;
 }
+.dropdownprofile{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4.5rem;
+    right: 10.5rem;
+    width:80px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 0;
+    align-items: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.dropdownprofile::before{
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    right: 1.1rem;
+    width:20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: white;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    
+}
+.dropdownprofile ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+.dropdownprofile li{
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+}
+.dropdownprofile button{
+    background: none;
+    padding: 10px 10px;
+}
+.dropdown--button:hover{
+    background: wheat;
+}
+.logout:hover{
+    background: rgb(220, 110, 110);
+}
+.nav--li{
+    list-style: none;
+}
 .burger--menu{
     color: gray;
     font-size: 1.5rem;
@@ -88,13 +144,21 @@
 .burger--menu:hover{
     color: rgb(138, 125, 125);
 }
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1900px) {
     .header{
         padding: 15px 5%;
         transition: 0.3s ease-in;
     }
+    .dropdownprofile{
+        right: 4rem;
+    }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
+    .dropdownprofile{
+        right: 2.5rem;
+    }
+}
+@media screen and (max-width: 900px) {
     .header{
         padding: 15px 3%;
         transition: 0.3s ease-in;
@@ -106,6 +170,10 @@
         padding-right: 2rem;
         transition: 0.3s ease-in;
     }
+    /* .dropdownprofile{
+        top: 4.5rem;
+        right: 3rem;
+    } */
 }
 @media screen and (max-width: 700px) {
     .nav--icon{
